@@ -497,7 +497,7 @@ packages:
     source: hosted
     version: "3.5.0"
   stacked_generator:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: stacked_generator
       sha256: "345e5eaa7ce58eb03402c33c57a0532da60264fe14f423e6e1de7c68ea4e9d94"

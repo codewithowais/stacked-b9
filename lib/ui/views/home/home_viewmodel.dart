@@ -11,4 +11,5 @@ class HomeViewmodel extends BaseViewModel {
   navigateToCounter() {
     navigationService.navigateToCounterView();
   }
+
 }

@@ -1,11 +1,11 @@
-void main( ){
+void main() {
   A a = A();
-  a.name = "Owais";
+  a.counter = 10;
+
   A b = A();
-  print(a.name);
-  print(b.name);
+  print(b.counter);
 }
 
 class A {
-  String name = '';
+  var counter = 0;
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:learnstackedb9/ui/home/home_viewmodel.dart';
+import 'package:learnstackedb9/ui/views/home/home_viewmodel.dart';
 import 'package:stacked/stacked.dart'; 
 
 class HomeView extends StatelessWidget {

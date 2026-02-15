@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:learnstackedb9/ui/counter/counter_viewmodel.dart';
+import 'package:learnstackedb9/ui/views/counter/counter_viewmodel.dart';
 import 'package:stacked/stacked.dart';
 
 class CounterView extends StatelessWidget {
