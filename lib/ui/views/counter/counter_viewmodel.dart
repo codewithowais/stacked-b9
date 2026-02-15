@@ -1,16 +1,26 @@
+import 'package:learnstackedb9/app/app.locator.dart';
+import 'package:learnstackedb9/app/app.router.dart';
+import 'package:learnstackedb9/services/counter_service.dart';
 import 'package:stacked/stacked.dart';
+import 'package:stacked_services/stacked_services.dart';
 
 class CounterViewmodel extends BaseViewModel {
-  int counter = 0;
+  final counterService = locator<CounterService>();//Singleton
+  final navigationService = locator<NavigationService>();//Singleton
 
   addValue() {
-    counter++;
+    counterService.addValue();
     rebuildUi();
   }
 
   decValue() {
-    counter--;
+    counterService.decValue();
     rebuildUi();
   }
   
+
+  
+  navigateToHome() {
+    navigationService.navigateToHomeView();
+  }
 }

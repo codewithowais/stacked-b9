@@ -13,6 +13,9 @@ class HomeView extends StatelessWidget {
         return Scaffold(
           body: Column(
             children: [
+              Text(' counterServiceV2 ${model.counterServiceV2.counter}'),
+              Text('counterService ${model.counterService.counter}'),
+
                ElevatedButton(
                 onPressed: () {
                   model.navigateToCounter();

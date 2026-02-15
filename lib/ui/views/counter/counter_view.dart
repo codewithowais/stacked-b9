@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learnstackedb9/ui/theme/app_colors.dart';
 import 'package:learnstackedb9/ui/views/counter/counter_viewmodel.dart';
 import 'package:stacked/stacked.dart';
 
@@ -9,21 +10,34 @@ class CounterView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ViewModelBuilder.reactive(
       viewModelBuilder: () => CounterViewmodel(),
-      builder: (context, mdoel, child) {
+      builder: (context, model, child) {
         return Scaffold(
           body: Column(
             children: [
-              Text('${mdoel.counter}'),
+              Text('${model.counterService.counter}'),
+
+               ElevatedButton(
+                onPressed: () {
+                  model.navigateToHome();
+                },
+                child: Text("Go To Counter View"),
+              ),
 
               ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: WidgetStateProperty.all(
+                    AppColors.primaryColor,
+                  ),
+                  foregroundColor: WidgetStateProperty.all(AppColors.darkTextColor)
+                ),
                 onPressed: () {
-                  mdoel.addValue();
+                  model.addValue();
                 },
                 child: Text("Inc"),
               ),
               ElevatedButton(
                 onPressed: () {
-                  mdoel.decValue();
+                  model.decValue();
                 },
                 child: Text("Dec"),
               ),
