@@ -1,3 +1,4 @@
+import 'package:learnstackedb9/services/api_service.dart';
 import 'package:learnstackedb9/services/counter_service.dart';
 import 'package:learnstackedb9/ui/views/counter/counter_view.dart';
 import 'package:learnstackedb9/ui/views/home/home_view.dart';
@@ -14,6 +15,7 @@ import 'package:stacked_services/stacked_services.dart';
     // Singleton(classType: NavigationService),
     LazySingleton(classType: NavigationService),
     LazySingleton(classType: CounterService),
+    LazySingleton(classType: ApiService),
   ]
 )
 class App {}

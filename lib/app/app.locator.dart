@@ -10,6 +10,7 @@
 import 'package:stacked_services/src/navigation/navigation_service.dart';
 import 'package:stacked_shared/stacked_shared.dart';
 
+import '../services/api_service.dart';
 import '../services/counter_service.dart';
 
 final locator = StackedLocator.instance;
@@ -27,4 +28,5 @@ Future<void> setupLocator({
   // Register dependencies
   locator.registerLazySingleton(() => NavigationService());
   locator.registerLazySingleton(() => CounterService());
+  locator.registerLazySingleton(() => ApiService());
 }

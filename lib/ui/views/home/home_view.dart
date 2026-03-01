@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learnstackedb9/ui/views/home/home_viewmodel.dart';
-import 'package:stacked/stacked.dart'; 
+import 'package:stacked/stacked.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -13,18 +13,22 @@ class HomeView extends StatelessWidget {
         return Scaffold(
           body: Column(
             children: [
+              ElevatedButton(
+                onPressed: () async {
+                  await model.getUsers();
+                },
+                child: Text('GET USER INFO'),
+              ),
               Text(' counterServiceV2 ${model.counterServiceV2.counter}'),
               Text('counterService ${model.counterService.counter}'),
 
-               ElevatedButton(
+              ElevatedButton(
                 onPressed: () {
                   model.navigateToCounter();
                 },
                 child: Text("Go To Counter View"),
               ),
-              Container(
-                child: Text(model.homeScreenText),
-              ),
+              Container(child: Text(model.homeScreenText)),
             ],
           ),
         );

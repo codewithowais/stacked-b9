@@ -1,5 +1,6 @@
 import 'package:learnstackedb9/app/app.locator.dart';
 import 'package:learnstackedb9/app/app.router.dart';
+import 'package:learnstackedb9/services/api_service.dart';
 import 'package:learnstackedb9/services/counter_service.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
@@ -10,9 +11,14 @@ class HomeViewmodel extends BaseViewModel {
   final navigationService = locator<NavigationService>();//Singleton
   final counterService = locator<CounterService>();//Singleton
   final counterServiceV2 = CounterService();//Singleton
+  final apiService = locator<ApiService>();//Singleton
 
   navigateToCounter() {
     navigationService.navigateToCounterView();
+  }
+
+  getUsers() async {
+    await apiService.getUsers();
   }
 
 }
